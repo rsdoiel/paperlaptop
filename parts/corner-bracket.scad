@@ -8,7 +8,6 @@
 
 /*
  * Corner
- * @param w - the width, height and depth
  * @param t - thickness of sides to join
  */
 module corner (t) {

@@ -11,29 +11,36 @@
  * @param w - the width, height and depth
  * @param t - thickness of sides to join
  */
-module corner (w, t) {
-    echo("width: ", w);
+module corner (t) {
     echo("thickness: ", t);
+    a = t;
+    b = t*10;
+    c = t*20;
 
     /* baseplate */
-    color([1,0,0]) cube([10,10,1]);
+    //color([a,0,0]) cube([b,b,a]);
+    
 
     /* outside 1 */
-    color([1,0,0]) cube([1,10,10]);
+    color([1,0,0]) cube([a,b,c]);
     
     /* outside 2 */
-    color([1,0,0]) cube([10,1,10]);
+    color([1,0,0]) cube([b,a,c]);
+
+    /* core */
+    translate([t, t, t]) {
+        color([1,0,0]) cube([t*2,t*2,c-t]);
+    }
 
     /* inside 1 */
-    translate([t, 0, t]) {
-        color([1,1,0]) cube([1,10,10-t]);
+    translate([t*2, 0, t]) {
+        color([1,1,0]) cube([a,b,c-t]);
     }
 
     /* inside 2 */
-    translate([0, t, t]) {
-        color([1,1,0]) cube([10,1,10-t]);
+    translate([0, t*2, t]) {
+        color([1,1,0]) cube([b,a,c-t]);
     }
-    
 }
 
-corner(1, 2);
+corner(4);

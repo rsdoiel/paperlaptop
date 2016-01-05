@@ -7,8 +7,11 @@ On the other hand I keep wondering how easy can we make it to just build your ow
 
 ## Materials
 
-+ cardboard
++ Raspberry Pi 2 Model B for SOC
++ 10.1 LCD panel and video adapter boards for display
++ Cardboard or fiber board for side, top and bottom panels
++ 3D printed ABS plastic corner joints
 
 ## Software
 
- + [OpenScad](http://www.openscad.org/) - because it is free and it made general sense to my tired brain
+ + [OpenSCAD](http://www.openscad.org/) - because it is free and it made general sense to my tired brain

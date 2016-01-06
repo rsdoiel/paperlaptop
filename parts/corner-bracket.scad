@@ -1,6 +1,8 @@
 /**
- * Corner join for working sides to bottom
- *  (or top)
+ * corner-bracket.scad is part of Paper Laptop.
+ * It describes a corner joint for the laptop's sides 
+ * and bottom.working sides, bottom and top.
+ *
  * @author R. S. Doiel, <rsdoiel@gmail.com>
  * copyright (c) 2016 all rights reserved
  * Released under a BSD 2-clause license

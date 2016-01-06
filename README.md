@@ -17,3 +17,8 @@ On the other hand I keep wondering how easy can we make it to just build your ow
 ## Software
 
  + [OpenSCAD](http://www.openscad.org/) - because it is free and it made general sense to my tired brain
+
+## ideas
+
++ Have the surface holding the LCD and Keyboards extend to form a handle when closed
++ Hinge should stop the lid from opening at 135 degrees, should have anough friction to stay open at shallower angles.

@@ -13,24 +13,30 @@
  * @param t - thickness of sides to join
  */
 module corner (t) {
-    echo("thickness: ", t);
-    a = t;
-    b = t*10;
-    c = t*20;
+    echo("thickness: ", t, "mm");
+    a = t; 
+    b = t*5;
+    c = 30;
 
     /* baseplate */
     //color([a,0,0]) cube([b,b,a]);
     
 
     /* outside 1 */
-    color([1,0,0]) cube([a,b,c]);
+    color([1,0,0]) cube([a,b,c+t]);
     
     /* outside 2 */
-    color([1,0,0]) cube([b,a,c]);
+    color([1,0,0]) cube([b,a,c+t]);
 
     /* core */
-    translate([t, t, t]) {
-        color([1,0,0]) cube([t*2,t*2,c-t]);
+    difference() {
+        translate([t, t, t]) {
+            color([1,0,0]) cube([t*2,t*2,c-t]);
+        }
+        translate([t*1.5, t*1.5, t]) {
+            /* hole for bolt */
+            color([1,1,1]) cylinder(c-t, 3, 3, false);
+        }
     }
 
     /* inside 1 */
@@ -42,6 +48,9 @@ module corner (t) {
     translate([0, t*2, t]) {
         color([1,1,0]) cube([b,a,c-t]);
     }
+    
 }
 
-corner(4);
+// Guessing fiber board is about 1/8th inch thick, 
+// i.e. 9.525mm
+corner(10);

@@ -8,19 +8,16 @@
  * Released under a BSD 2-clause license
  */
 
+// Guessing fiber board is about 1/4th inch thick, 
+// i.e. 6.35mm
+
 /*
  * Corner
- * @param t - thickness of sides to join
  */
 module corner (t) {
-    echo("thickness: ", t, "mm");
     a = t; 
-    b = t*5;
-    c = 30;
-
-    /* baseplate */
-    //color([a,0,0]) cube([b,b,a]);
-    
+    b = t*8.0;
+    c = t*4.0;
 
     /* outside 1 */
     color([1,0,0]) cube([a,b,c+t]);
@@ -51,6 +48,5 @@ module corner (t) {
     
 }
 
-// Guessing fiber board is about 1/8th inch thick, 
-// i.e. 9.525mm
-corner(10);
+// 1/4th inch ~= 6.35mm
+corner(6.35);

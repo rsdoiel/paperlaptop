@@ -17,10 +17,11 @@ I want to minimize the tools I need to assemble with and beyond creating the re-
 
 ## Electronics
 
-+ Raspberry Pi 2
-    + Power 3.5v DC, 1000am draw
++ Raspberry Pi 2 Model B
+    + Power 3.5v DC at 1000amps
 + Tontec 10.1" LCD panel and video driver boards
-    + Power 12v DC, 1000ma ???? (need to confirm, my memory may be wrong)
+    + Power 12v DC, 2000amps (need to confirm, my memory may be wrong)
+    + On power supply center if barrel connector is positive
 + Wired USB Keyboard 
 + Wired USB Trackpad
 + Power management
@@ -50,9 +51,7 @@ Misc Pi add ons to consider
 
 + [OpenSCAD](http://www.openscad.org/) - because it is free and it made general sense to my tired brain
 + [Slic3r](http://slic3r.org/) - 
-    + Downloaded tar ball and unzipped into home directory add slic3r/bin to path
-    + Can build from source on Ubuntu
-        + Intall QtSDK, qt-sdk, cmake, etc.
+    + Download tar ball and unzipped into home directory add $HOME/slic3r/bin to path
 
 
 ## Notes and ideas
@@ -67,8 +66,9 @@ Misc Pi add ons to consider
 
 ### Software to explore
 
-+ [CADQuery](https://github.com/dcowden/cadquery)
 + [FreeCAD](http://www.freecadweb.org/) - A version is available as a Debian/Ubuntu package
+    + [CadQuery](https://github.com/dcowden/cadquery)
+    + [CadQuery Plugin for FreeCAD](https://github.com/jmwright/cadquery-freecad-module)
 + [OctoPrint](http://octoprint.org/) - image available for Dedicate Raspberry Pi
 + [OpenJSCad](http://openjscad.org/) - JS library, play with via website
 + [HeeksCAD](https://sites.google.com/site/heekscad/)

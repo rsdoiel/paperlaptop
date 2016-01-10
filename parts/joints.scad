@@ -16,7 +16,7 @@
  */
 module corner (t) {
     a = t; 
-    b = t*8.0;
+    b = t*40.0;
     c = t*4.0;
 
     /* outside 1 */
@@ -35,7 +35,31 @@ module corner (t) {
             color([1,1,1]) cylinder(c-t, 3, 3, false);
         }
     }
-
+    difference() {
+        a = t * 2;
+        translate([a, t, t]) {
+            color([0,1,0]) cube([t*2,t*2,c-t]);
+        }
+        /*
+        translate([t*1.5, t*1.5, t]) {
+            // hole for bolt
+            color([1,1,1]) cylinder(c-t, 3, 3, false);
+        }
+        */
+    }
+    difference() {
+        a = t * 2;
+        translate([t, a, t]) {
+            color([0,1,0]) cube([t*2,t*2,c-t]);
+        }
+        /*
+        translate([t*1.5, t*1.5, t]) {
+            // hole for bolt
+            color([1,1,1]) cylinder(c-t, 3, 3, false);
+        }
+        */
+    }
+    
     /* inside 1 */
     translate([t*2, 0, t]) {
         color([1,1,0]) cube([a,b,c-t]);

@@ -1,16 +1,16 @@
 
 # Paper Laptop
 
-Prototype designs for a DIY laptop enclosure
+Prototype design for a DIY laptop based on a Raspberry Pi 2 Model B. Design should be cheap to build (e.g. make libral use of cardboard, foamboard or chipboard), reply on a minimum number of custom parts to facilitate reconfiguration and experimentation.
 
-With the growing number of affordable single board computers, cheaper LCD panels and generally decreasing prices of electronic components we've seen a growing number of projects focusing on building laptops and tablets. Most involve using 3D printed ABS for a prototype and running some sort of fund raising project to create injection molded versions. These projects are very cool.
+Custom parts will be 3d printed from PLA to minimize environmental empact (hopefully be recyclable at some point). These will be kept to a minimum.
 
-On the other hand I keep wondering how easy can we make it to just build your own.  There are some affordable supplies like paper, cardboard and fiber board available that require minimal tooling so I started thinking about building my own laptop using paper products (or as much as I could get away with).
+Probably use some inexpensive nylon standoffs, nuts and bolts to.
 
-## Materials
+I want to minimize the tools I need to assemble with and beyond creating the re-usable custom parts be able assemble this safely on a kitchen table or office desktop.
 
-+ Raspberry Pi 2 Model B for SOC
-+ 10.1 LCD panel and video adapter boards for display
+## Materials List
+
 + Firm material for case such as cardboard, fiberboard, chipboard or foam board
 + Misc 3D printed PLA plastic parts (e.g. joins, hinges, latches)
 
@@ -34,14 +34,14 @@ On the other hand I keep wondering how easy can we make it to just build your ow
 
 Misc Pi add ons to consider
 
-+ WiFi USB adapter
-+ Bluetoth USB adapter
++ WiFi/Bluetooth USB adapter
 + Astro Pi hat
 + Audio card plus embedded speakers
 + Microphone and on/off switch
 + Pi Camera and on/off switch
-+ [Makey Makey](http://www.makeymakey.com/)
 + A cluster of Pi Zeros for additional processing power
+    + a small switch or hub to run TCP/IP over
++ [Makey Makey](http://www.makeymakey.com/)
 
 
 ## Software
@@ -49,6 +49,10 @@ Misc Pi add ons to consider
 ### Project design
 
 + [OpenSCAD](http://www.openscad.org/) - because it is free and it made general sense to my tired brain
++ [Slic3r](http://slic3r.org/) - 
+    + Downloaded tar ball and unzipped into home directory add slic3r/bin to path
+    + Can build from source on Ubuntu
+        + Intall QtSDK, qt-sdk, cmake, etc.
 
 
 ## Notes and ideas
@@ -60,4 +64,19 @@ Misc Pi add ons to consider
 + Lid and base should have generally the same demensions for semetry
 + Have the surface holding the LCD and Keyboards extend to form a handle when closed
 + Hinge should stop the lid from opening at 135 degrees, should have anough friction to stay open at shallower angles
+
+### Software to explore
+
++ [CADQuery](https://github.com/dcowden/cadquery)
++ [FreeCAD](http://www.freecadweb.org/) - A version is available as a Debian/Ubuntu package
++ [OctoPrint](http://octoprint.org/) - image available for Dedicate Raspberry Pi
++ [OpenJSCad](http://openjscad.org/) - JS library, play with via website
++ [HeeksCAD](https://sites.google.com/site/heekscad/)
+    + [Source Code](https://github.com/Heeks/heekscad)
++ [GCodeViewer](https://github.com/hudbrog/gCodeViewer)
+    + [GCodeViewer](http://gcode.ws/)
+
+## Reference
+
++ [RepRap](http://reprap.org/wiki/Useful_Software_Packages)
 

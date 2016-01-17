@@ -1,7 +1,17 @@
 
 # misc notes
 
-+ 1/4th inch in millimeters is 6.35
-+ 8 1/2 inch in millimeters is 215.9
-+ 11 inch in millimeters is 279.4
+| Inches | Millimeters |
++--------+-------------+
+| 1/16   | 1.5875      |
+| 1/8    | 3.175       |
+| 3/16   | 4.7625      |
+| 1/4    | 6.35        |
+| 3/8    | 9.525       |
+| 1/2    | 12.7        |
+| 5/8    | 15.875      |
+| 3/4    | 19.05       |
+| 7/8    | 22.225      |
+| 1      | 25.4        |
+
 

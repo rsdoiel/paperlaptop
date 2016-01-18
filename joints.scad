@@ -1,15 +1,20 @@
 /**
- * corner-bracket.scad is part of Paper Laptop.
- * It describes a corner joint for the laptop's sides 
- * and bottom.working sides, bottom and top.
+ * joints.scad is part of Paper Laptop project.
+ * This file contains various models for joining two or
+ * more pieces of flat materials together.
  *
  * @author R. S. Doiel, <rsdoiel@gmail.com>
  * copyright (c) 2016 all rights reserved
  * Released under a BSD 2-clause license
  */
 
-// Guessing fiber board is about 1/4th inch thick, 
-// i.e. 6.35mm
+// Formboard firm enough to make a case with is about
+// 1/4th inch (6.35mm) thick. Usually sold in single sheets
+// of about 20"x30".
+
+//
+// Basic models are for parts without any holes for fasteners.
+//
 
 /*
  * CornerBasic() - corner joint without fastener hole
@@ -28,9 +33,11 @@ module CornerBasic() {
         color([0,1,0]) cube([t,50.8,25.4+(2*t)]);
     }
     // Outer corners
-    translate([u*-1.25,u,0]) {
+    translate([u*-1,u,0]) {
         color([0,1,0]) cylinder(h=25.4+(2*t),r=1.5*u,center=false);
     }
+
+    // Outer bumps
     translate([u*-1.25,u*18,0]) {
         color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
     }
@@ -50,7 +57,6 @@ module CornerBasic() {
     translate([u*4,u*0.75,0]) {
         color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
     }
-    
     
     // Inner shell
     translate([t,2*t,t]) {

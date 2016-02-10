@@ -1,11 +1,6 @@
 /**
- * A collection of parts to print together.
+ * Print a single corner.
  */
  include <joints.scad>
- 
- 
-Corner();
 
-//FourCornersGrouped();
-//TwoEndsGrouped();
-//TwoSplicesGrouped();
+Corner();

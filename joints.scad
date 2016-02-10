@@ -24,57 +24,71 @@ module CornerBasic() {
     t = 6.35; // Thickness of the 1/4th" Foamboard
 
     // Inner block, width, depth, height
-    translate([0, t, t]) {
-            color([1,0,0]) cube([25.4, 25.4, 25.4]); 
+    translate([0, t, t/2]) {
+        difference() {
+            color([1,0,0]) cube([25.4, 25.4, 25.4]);
+            translate([t*3.5,t*3.5,-1]) {
+                color([1,0,1]) cylinder(h=28,r=t*1.25,center=false);
+            }
+        }
     }
+ 
+     // Inner shell
+    translate([t,2*t,t/2]) {
+        color([0,1,0]) cube([50.8-t,t/2,25.4]);
+        color([0,1,0]) cube([t/2,50.8-t,25.4]);
+    }
+   
     // Outer shell
-    color([0,1,0]) cube([50.8,t,25.4+(2*t)]);
+    color([0,1,0]) cube([50.8,t,25.4+t]);
     translate([-t,t,0]) {
-        color([0,1,0]) cube([t,50.8,25.4+(2*t)]);
+        color([0,1,0]) cube([t,50.8,25.4+t]);
     }
     // Outer corners
     translate([u*-1,u,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.5*u,center=false);
+        color([0,1,0]) cylinder(h=25.4+t,r=1.5*u,center=false);
     }
 
     // Outer bumps
     translate([u*-1.25,u*18,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
+        color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
     }
     translate([u*-1.25,u*12,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
+        color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
     }
     translate([u*-1.25,u*6,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
+        color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
     }
 
     translate([u*16,u*0.75,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
+        color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
     }
     translate([u*10,u*0.75,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
+        color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
     }
     translate([u*4,u*0.75,0]) {
-        color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
-    }
-    
-    // Inner shell
-    translate([t,2*t,t]) {
-        color([0,1,0]) cube([50.8-t,t,25.4]);
-        color([0,1,0]) cube([t,50.8-t,25.4]);
-    }
+        color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
+    }    
 }
 
 //
 // Corner() basic corner joint plus hole for fastener
 //
 module Corner() {
-    difference() {
-        u = 3.175;
-        CornerBasic();
-        // Add a hole for screw
-        translate([12,18,0]) {
-            color([0,0,1]) cylinder(h=25.4+(4*u),r=u,center=false);
+    // Scale down the basic corner so that the
+    // for 50% width/depth, 75% of height 
+    scale([0.5, 0.5, 0.75]) {
+        difference() {
+            u = 3.175;
+            CornerBasic();
+            // Add a hole for screw
+            translate([12,18,0]) {
+                color([0,0,1]) cylinder(
+                    h=25.4+(4*u),
+                    r=u,
+                    center=false
+                );
+            }
         }
     }
 }
@@ -118,12 +132,16 @@ module EndBasic() {
 // End() basic corner joint plus hole for fastener
 //
 module End() {
-    difference() {
-        u = 3.175;
-        EndBasic();
-        // Add a hole for screw
-        translate([12,18,0]) {
-            color([0,0,1]) cylinder(h=25.4+(4*u),r=u,center=false);
+    // Scale down the basic corner so that the
+    // for 50% width/depth, 75% of height 
+    scale([0.5, 0.5, 0.75]) {
+        difference() {
+            u = 3.175;
+            EndBasic();
+            // Add a hole for screw
+            translate([12,18,0]) {
+                color([0,0,1]) cylinder(h=25.4+(4*u),r=u,center=false);
+            }
         }
     }
 }
@@ -189,12 +207,14 @@ module SpliceBasic() {
 // Splice() basic corner joint plus hole for fastener
 //
 module Splice() {
-    difference() {
-        u = 3.175;
-        SpliceBasic();
-        // Add a hole for screw
-        translate([0,18,0]) {
-            color([0,0,1]) cylinder(h=25.4+(4*u),r=u,center=false);
+    scale([0.5, 0.5, 0.75]) {
+        difference() {
+            u = 3.175;
+            SpliceBasic();
+            // Add a hole for screw
+            translate([0,18,0]) {
+                color([0,0,1]) cylinder(h=25.4+(4*u),r=u,center=false);
+            }
         }
     }
 }

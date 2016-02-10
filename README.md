@@ -3,7 +3,7 @@
 
 Prototype design for a DIY laptop based on a Raspberry Pi 2 Model B. Design should be cheap to build (e.g. make libral use of cardboard, foamboard or chipboard), reply on a minimum number of custom parts to facilitate reconfiguration and experimentation.
 
-Custom parts will be 3d printed from PLA to minimize environmental empact (hopefully be recyclable at some point). These will be kept to a minimum.
+Custom parts will be 3d printed from PLA to minimize environmental impact (hopefully be recyclable at some point). These will be kept to a minimum.
 
 Probably use some inexpensive nylon standoffs, nuts and bolts to.
 
@@ -52,6 +52,7 @@ Misc Pi add ons to consider
 + [OpenSCAD](http://www.openscad.org/) - because it is free and it made general sense to my tired brain
 + [Slic3r](http://slic3r.org/) - 
     + Download tar ball and unzipped into home directory add $HOME/slic3r/bin to path
++ [MatterControl](http://www.mattercontrol.com/articles/mattercontrol-getting-started) - printer control software
 
 
 ## Notes and ideas

@@ -49,7 +49,7 @@ module Corner() {
     bump_o = -0.3;
  
     // main fastening surface
-    translate([t*2, t*2, t]) {
+    translate([t*2.25, t*2.25, t]) {
         difference() {
             // fastener body
             color([1,0,0]) cylinder(h=inner_h, r=t, center=false);
@@ -87,8 +87,8 @@ module Corner() {
     }
     
     // Inner side a
-    translate([0, t, t]) {
-       color([0,1,0]) cube([side_l, side_t*0.75, inner_h], center=false);
+    translate([0, t*1.25, t]) {
+       color([0,1,0]) cube([side_l, side_t, inner_h], center=false);
     }
     
     // outer side b
@@ -97,15 +97,15 @@ module Corner() {
     }
     
     // Inner side b
-    translate([t, 0, t]) {
-       color([0,1,0]) cube([side_t*0.75, side_l, inner_h], center=false);
+    translate([t*1.25, 0, t]) {
+       color([0,1,0]) cube([side_t, side_l, inner_h], center=false);
     }
     
     // filler corner
-    translate([1, 7.25, t]) {
+    translate([1, 8, t]) {
        color([0,0, 1]) cube([inner_t, outer_t, inner_h], center=false);
     }
-    translate([7.25, 1, t]) {
+    translate([8, 1, t]) {
        color([0,0, 1]) cube([outer_t, inner_t, inner_h], center=false);
     }
 }

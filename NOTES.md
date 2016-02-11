@@ -15,4 +15,6 @@
 |    7/8    |    0.875  | 22.225       |
 |    1      |    1.0    | 25.4         |
 
+## Raspberry Pi Dimensions
 
+85.60mm x 56mm x 21mm (or roughly 3.37″ x 2.21″ x 0.83″),

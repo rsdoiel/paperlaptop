@@ -8,8 +8,8 @@
  * Released under a BSD 2-clause license
  */
 
-// Formboard firm enough to make a case with is about
-// 1/4th inch (6.35mm) thick. Usually sold in single sheets
+// Foam board firm enough to make a case with is about
+// 1/8th to 1/4th inch (6.35mm) thick. Usually sold in single sheets
 // of about 20"x30".
 
 //
@@ -21,7 +21,7 @@
  */
 module CornerBasic() {
     u = 3.175; // Unit is 3.175mm or 1/8th inch:w
-    t = 6.35; // Thickness of the 1/4th" Foamboard
+    t = 6.35; // Thickness of the 1/4th" Foam board
 
     // Inner block, width, depth, height
     translate([0, t, t/2]) {
@@ -32,13 +32,13 @@ module CornerBasic() {
             }
         }
     }
- 
+
      // Inner shell
     translate([t,2*t,t/2]) {
         color([0,1,0]) cube([50.8-t,t/2,25.4]);
         color([0,1,0]) cube([t/2,50.8-t,25.4]);
     }
-   
+
     // Outer shell
     color([0,1,0]) cube([50.8,t,25.4+t]);
     translate([-t,t,0]) {
@@ -68,7 +68,7 @@ module CornerBasic() {
     }
     translate([u*4,u*0.75,0]) {
         color([0,1,0]) cylinder(h=25.4+t,r=1.25*u,center=false);
-    }    
+    }
 }
 
 //
@@ -76,7 +76,7 @@ module CornerBasic() {
 //
 module Corner() {
     // Scale down the basic corner so that the
-    // for 50% width/depth, 75% of height 
+    // for 50% width/depth, 75% of height
     scale([0.5, 0.5, 0.75]) {
         difference() {
             u = 3.175;
@@ -102,7 +102,7 @@ module EndBasic() {
 
     // Inner block, width, depth, height
     translate([0, t, t]) {
-            color([1,0,0]) cube([25.4, 25.4, 25.4]); 
+            color([1,0,0]) cube([25.4, 25.4, 25.4]);
     }
     // Outer shell
     color([0,1,0]) cube([50.8,t,25.4+(2*t)]);
@@ -121,7 +121,7 @@ module EndBasic() {
     translate([u*4,u*0.75,0]) {
         color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
     }
-    
+
     // Inner shell
     translate([t,2*t,t]) {
         color([0,1,0]) cube([50.8-t,t,25.4]);
@@ -133,7 +133,7 @@ module EndBasic() {
 //
 module End() {
     // Scale down the basic corner so that the
-    // for 50% width/depth, 75% of height 
+    // for 50% width/depth, 75% of height
     scale([0.5, 0.5, 0.75]) {
         difference() {
             u = 3.175;
@@ -155,11 +155,11 @@ module SpliceBasic() {
 
     // Inner block (cube: [width, depth, height])
     translate([0, t, t]) {
-            color([1,0,0]) cube([25.4, 25.4, 25.4]); 
+            color([1,0,0]) cube([25.4, 25.4, 25.4]);
     }
     // Outer shell
     color([0,1,0]) cube([50.8,t,25.4+(2*t)]);
-    
+
     // Outer corners
     translate([u*16,u*0.75,0]) {
         color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
@@ -170,21 +170,21 @@ module SpliceBasic() {
     translate([u*4,u*0.75,0]) {
         color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
     }
-    
+
     // Inner shell
     translate([t,2*t,t]) {
         color([0,1,0]) cube([50.8-t,t,25.4]);
     }
-    
+
     // Mirrored shapes
     mirror(180) {
         // Inner block (cube: [width, depth, height])
         translate([0, t, t]) {
-                color([1,0,0]) cube([25.4, 25.4, 25.4]); 
+                color([1,0,0]) cube([25.4, 25.4, 25.4]);
         }
         // Outer shell
         color([0,1,0]) cube([50.8,t,25.4+(2*t)]);
-        
+
         // Outer corners
         translate([u*16,u*0.75,0]) {
             color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
@@ -195,7 +195,7 @@ module SpliceBasic() {
         translate([u*4,u*0.75,0]) {
             color([0,1,0]) cylinder(h=25.4+(2*t),r=1.25*u,center=false);
         }
-        
+
         // Inner shell
         translate([t,2*t,t]) {
             color([0,1,0]) cube([50.8-t,t,25.4]);

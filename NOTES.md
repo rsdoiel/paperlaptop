@@ -1,7 +1,7 @@
 
 # misc notes
 
-|  Inches   | Inches    |  Millimeters |
+|  inches   | inches    |  millimeters |
 |(fraction) | (decimal) |              | 
 +-----------+-----------+--------------+
 |    1/16   |    0.0625 | 1.5875       |
@@ -18,3 +18,18 @@
 ## Raspberry Pi Dimensions
 
 85.60mm x 56mm x 21mm (or roughly 3.37″ x 2.21″ x 0.83″),
+
+## fastener deminsions
+
+need to decide the type and size of the fastenerI will need
+
+## part ideas
+
++ corners
++ ends
++ splices
++ t-splices (to allow for inner cardboard walls as dividers or internal supports)
++ splice with entry area (e.g. for cords, cables, headphone, etc)
++ hinges
++ handle attach points
+

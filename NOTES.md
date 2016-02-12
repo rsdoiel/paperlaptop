@@ -15,9 +15,13 @@
 |    7/8    |    0.875  | 22.225       |
 |    1      |    1.0    | 25.4         |
 
-## Raspberry Pi Dimensions
+## Raspberry Pi 2 B Dimensions
 
 85.60mm x 56mm x 21mm (or roughly 3.37″ x 2.21″ x 0.83″),
+
+## Raspberry Pi Zero Dimensions
+
+33mm x 65mm x 5mm (or roughly 1.299" x 2.559" x 0.196")
 
 ## fastener deminsions
 

@@ -1,7 +1,5 @@
 /**
- * joints2.scad is part of Paper Laptop project.
- * This file contains various models for joining two or
- * more pieces of flat materials together.
+ * ends.scad is part of Paper Laptop project.
  *
  * @author R. S. Doiel, <rsdoiel@gmail.com>
  * copyright (c) 2016 all rights reserved
@@ -12,7 +10,7 @@
 # misc notes
 
 |  Inches   | Inches    |  Millimeters |
-|(fraction) | (decimal) |              | 
+|(fraction) | (decimal) |              |
 +-----------+-----------+--------------+
 |    1/16   |    0.0625 | 1.5875       |
 |    1/8    |    0.125  | 3.175        |
@@ -27,15 +25,15 @@
 
 ## Raspberry Pi Dimensions
 
-85.60mm x 56mm x 21mm 
+85.60mm x 56mm x 21mm
 (or roughly 3.37″ x 2.21″ x 0.83″)
 
  */
- 
+
  /*
-  * Corner: case corners, units assumed is 1mm
+  * End: internal ends to allow cables, cords or other access through a side
   */
-module Corner() {
+module End() {
     // sizing and spacing
     t = 3.175;// Aprox. 1/8 inch.
     side_t = t/2;
@@ -47,14 +45,14 @@ module Corner() {
     outer_h = inner_h+(2*t);
     bump_r = 2;
     bump_o = -0.3;
- 
+
     // main fastening surface
     translate([t*2.25, t*2.25, t]) {
         difference() {
             // fastener body
             color([1,0,0]) cylinder(h=inner_h, r=t, center=false);
             // bolt hole
-            color([0,0,0]) cylinder(h=inner_h, r=t/2, center=false);
+            color([0,0,0]) cylinder(h=inner_h, r=t/1.5, center=false);
         }
     }
 
@@ -67,7 +65,7 @@ module Corner() {
     translate([b_spacing, bump_o, 0]) {
         color([1,0,0]) cylinder(h=outer_h, r=bump_r, center=false);
     }
-    
+
     // middle bumpers side b
     translate([bump_o, b_spacing, 0]) {
         color([1,0,0]) cylinder(h=outer_h, r=bump_r, center=false);
@@ -77,30 +75,32 @@ module Corner() {
     translate([side_l, bump_o, 0]) {
         color([1,0,0]) cylinder(h=outer_h, r=bump_r, center=false);
     }
+    /*
     translate([bump_o, side_l, 0]) {
         color([1,0,0]) cylinder(h=outer_h, r=bump_r, center=false);
     }
-    
+    */
+
     // outer side a
     translate([0, 0, 0]) {
        color([0,1,0]) cube([side_l, side_t, outer_h], center=false);
     }
-    
+
     // Inner side a
     translate([0, t*1.25, t]) {
        color([0,1,0]) cube([side_l, side_t, inner_h], center=false);
     }
-    
+
     // outer side b
     translate([0, 0, 0]) {
-       color([0,1,0]) cube([side_t, side_l, outer_h], center=false);
+       color([0,1,0]) cube([side_t, side_l/2, outer_h], center=false);
     }
-    
+
     // Inner side b
     translate([t*1.25, 0, t]) {
-       color([0,1,0]) cube([side_t, side_l, inner_h], center=false);
+       color([0,1,0]) cube([side_t, side_l/2, inner_h], center=false);
     }
-    
+
     // filler corner
     translate([1, 8, t]) {
        color([0,0, 1]) cube([inner_t, outer_t, inner_h], center=false);
@@ -109,5 +109,3 @@ module Corner() {
        color([0,0, 1]) cube([outer_t, inner_t, inner_h], center=false);
     }
 }
-
-Corner();

@@ -1,23 +1,31 @@
 
 # Paper Laptop
 
-Prototype design for a DIY laptop based on a Raspberry Pi 2 Model B. Design should be cheap to build (e.g. make libral use of cardboard, foamboard or chipboard), reply on a minimum number of custom parts to facilitate reconfiguration and experimentation.
+Prototype design for a DIY laptop based on a Raspberry Pi 3. Design should 
+be cheap to build (e.g. make libral use of cardboard, foamboard or 
+chipboard), reply on a minimum number of custom parts to facilitate 
+reconfiguration and experimentation.
 
-Custom parts will be 3d printed from PLA to minimize environmental impact (hopefully be recyclable at some point). These will be kept to a minimum.
+Custom parts will be 3d printed from PLA to minimize environmental impact 
+(hopefully be recyclable at some point). These will be kept to a minimum.
 
-Probably use some inexpensive nylon standoffs, nuts and bolts to.
+Placement of parts need to be changable.  I think integrating some 
+inexpensive nylon standoffs with velcro dots and small discs should
+allow for flexibility with out drilling allot of holes.
 
-I want to minimize the tools I need to assemble with and beyond creating the re-usable custom parts be able assemble this safely on a kitchen table or office desktop.
+I want to minimize the tools I need to assemble with and beyond creating 
+the re-usable custom parts be able assemble this safely on a kitchen 
+table or office desktop.
 
 ## Materials List
 
-+ Firm material for case such as cardboard, fiberboard, chipboard or foam board
++ Firm material for case such as cardboard, fiberboard, chipboard or foam board, or hobbyist plywood
 + Misc 3D printed PLA plastic parts (e.g. joins, hinges, latches)
 
 
 ## Electronics
 
-+ Raspberry Pi 2 Model B
++ Raspberry Pi 3 
     + Power 3.5v DC at 1000amps
 + Tontec 10.1" LCD panel and video driver boards
     + Power 12v DC, 2000amps (need to confirm, my memory may be wrong)
